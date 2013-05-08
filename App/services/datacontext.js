@@ -31,8 +31,7 @@
         var hasChanges = ko.observable(false);
 
         var primeData = function () {
-            var promise = Q.all([getManufacturers()])
-                .then(processLookups);
+            var promise = Q.all([getManufacturers()]);
 
             return promise.then(success);
             
@@ -75,10 +74,6 @@
 
         function log(msg, data, showToast) {
             logger.log(msg, data, system.getModuleId(datacontext), showToast);
-        }
-        
-        function processLookups() {
-            model.createNullos(manager);
         }
         //#endregion
 });
