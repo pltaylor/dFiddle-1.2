@@ -5,7 +5,7 @@
            manufacturerObservable = ko.observableArray([
 					{ name: "ManufacturerA", manufacturerID: "A" },
 					{ name: "ManufacturerB", manufacturerID: "B" },
-					{ name: "ManufacturerC", manufacturerID: "C" } 
+					{ name: "ManufacturerC", manufacturerID: "C" } ]);
         };
         
         var getBikeModels = function (bikeModelsObservable, manufacturerId) {
