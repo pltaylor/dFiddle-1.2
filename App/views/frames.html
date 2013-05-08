@@ -1,0 +1,23 @@
+﻿<section>
+    <h2 class="page-title" data-bind="text: title"></h2>
+    <canvas id="bike3" width="500" height="300" class="frame-canvas">
+        <p>Your browser doesn't support canvas.</p>
+    </canvas>
+    <canvas id="bike2" width="500" height="300" class="frame-canvas">
+        <p>Your browser doesn't support canvas.</p>
+    </canvas>
+    <canvas id="bike1" width="500" height="300" class="frame-canvas">
+        <p>Your browser doesn't support canvas.</p>
+    </canvas>
+    <div class="row-fluid" style="margin-top: 250px;">
+        <div class="span4" data-bind="with: frame1">
+            <!--ko compose: {view: 'frameSelection'} --><!--/ko-->
+        </div>
+        <div class="span4" data-bind="with: frame2">
+            <!--ko compose: {view: 'frameSelection'} --><!--/ko-->
+        </div>
+        <div class="span4" data-bind="with: frame3">
+            <!--ko compose: {view: 'frameSelection'} --><!--/ko-->
+        </div>
+    </div>
+</section>

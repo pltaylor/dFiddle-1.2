@@ -1,0 +1,42 @@
+﻿<h3 class="text-center" data-bind="text: name"></h3>
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="manufacturer">Manufacturer:</label>
+        <div class="controls">
+            <select class="input-medium" id="manufacturer" data-bind="options: $parent.manufacturers, optionsText: 'name', value: manufacturer"></select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="model">Model:</label>
+        <div class="controls">
+            <select class="input-medium" id="model" data-bind="options: models, optionsText: 'name', value: model"></select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="size">Size:</label>
+        <div class="controls">
+            <select class="input-medium" id="size" data-bind="options: sizes, optionsText: 'size', value: size"></select>
+        </div>
+    </div>
+    <div data-bind="with: size">
+        <h3 class="text-center">Geometry</h3>
+        <dl class="dl-horizontal">
+            <dt>Stack:</dt>
+            <dd data-bind="text: stackFormatted"></dd>
+            <dt>Reach:</dt>
+            <dd data-bind="text: reachFormatted"></dd>
+            <dt>Front Center:</dt>
+            <dd data-bind="text: frontCenterFormatted"></dd>
+            <dt>Rear Center:</dt>
+            <dd data-bind="text: rearCenterFormatted"></dd>
+            <dt>Head Tube:</dt>
+            <dd data-bind="text: headTubeLengthFormatted"></dd>
+            <dt>Min Seat Angle:</dt>
+            <dd data-bind="text: minSeatAngleFormatted"></dd>
+            <dt>Min Seat Angle:</dt>
+            <dd data-bind="text: maxSeatAngleFormatted"></dd>
+            <dt>Wheel Size:</dt>
+            <dd data-bind="text: wheelSizeFormatted"></dd>
+        </dl>
+    </div>
+</form>

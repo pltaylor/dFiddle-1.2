@@ -1,0 +1,55 @@
+﻿<section>
+    <form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="manufacturer">Manufacturer:</label>
+            <div class="controls">
+                <select class="input-large" id="manufacturer" data-bind="options: manufacturers, optionsText: 'name', value: manu">
+                </select>
+            </div>
+        </div>
+
+    </form>
+    <div class="button-bar">
+        
+        <button class="btn btn-info"
+            data-bind="click: cancel, enable: canSave"><i class="icon-undo"></i> Cancel</button>
+        <button class="btn btn-info"
+                data-bind="click: save, enable: canSave"><i class="icon-save"></i> Save</button>
+        <i class="icon-asterisk" data-bind="visible: hasChanges"></i>
+    </div>
+    <div data-bind="foreach: modelsWithSizes">
+        <legend data-bind="text: name"></legend>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Stack</th>
+                    <th>Reach</th>
+                    <th>Head Tube Length</th>
+                    <th>Head Tube Angle</th>
+                    <th>Front Center</th>
+                    <th>Rear Center</th>
+                    <th>Min. Seat Angle</th>
+                    <th>Max. Seat Angle</th>
+                    <th>Wheel Size</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: sizes">
+                <tr>
+                    <td><input class="input-small" data-bind="value: size" placeholder="Size"/></td>
+                    <td><input class="input-small" data-bind="value: stack" placeholder="Stack"/></td>
+                    <td><input class="input-small" data-bind="value: reach" placeholder="Reach"/></td>
+                    <td><input class="input-small" data-bind="value: headTubeLength" placeholder="Head Tube Length"/></td>
+                    <td><input class="input-small" data-bind="value: headTubeAngle" placeholder="Head Tube Angle"/></td>
+                    <td><input class="input-small" data-bind="value: frontCenter" placeholder="Front Center"/></td>
+                    <td><input class="input-small" data-bind="value: rearCenter" placeholder="Rear Center"/></td>
+                    <td><input class="input-small" data-bind="value: minSeatAngle" placeholder="Min. Seat Angle"/></td>
+                    <td><input class="input-small" data-bind="value: maxSeatAngle" placeholder="Max. Seat Angle"/></td>
+                    <td data-bind="text: wheelSize"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</section>
