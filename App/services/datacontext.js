@@ -59,12 +59,12 @@
 
         //#region Internal methods        
         function getLocal(resource, ordering, includeNullos) {
-            var query = entityQuery.from(resource)
-                .orderBy(ordering);
-            if (!includeNullos) {
-                query = query.where('id', '!=', 0);
+            if(resource == 'Manufacturers'){
+            	return ko.observableArray([
+					{ name: "ManufacturerA", manufacturerID: "A" },
+					{ name: "ManufacturerB", manufacturerID: "B" },
+					{ name: "ManufacturerC", manufacturerID: "C" } ]);
             }
-            return manager.executeQueryLocally(query);
         }
         
         function queryFailed(error) {
